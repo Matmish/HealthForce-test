@@ -1,94 +1,108 @@
-HealthForce Test Project
+Got it 👍 You want the `README.md` as a **code block** so you can just copy it into your repo. Here it is:
+
+````markdown
+# HealthForce Test Project
 
 A test project providing CLI tools for:
 
-LinkedIn Extractor – Scrapes posts from a given LinkedIn profile.
+- **LinkedIn Extractor** – Scrapes posts from a given LinkedIn profile.  
+- **Textract Extractor** – Parses invoices and prescriptions from image files.  
 
-Textract Extractor – Parses invoices and prescriptions from image files.
+Built with Python and [Playwright](https://playwright.dev/python/).
 
-Built with Python and Playwright
-.
+---
 
-🚀 Features
+## 🚀 Features
+- Save LinkedIn login session state locally.
+- Extract posts from LinkedIn profiles with customizable post limits.
+- Extract text from invoice and prescription images.
+- Simple CLI interface with subcommands (`linkedin`, `textract`).
 
-Save LinkedIn login session state locally.
+---
 
-Extract posts from LinkedIn profiles with customizable post limits.
-
-Extract text from invoice and prescription images.
-
-Simple CLI interface with subcommands (linkedin, textract).
-
-📦 Installation
+## 📦 Installation
 
 Clone the repository:
-
+```bash
 git clone https://github.com/your-username/healthforce_test_project.git
 cd healthforce_test_project
-
+````
 
 Create a virtual environment and install dependencies:
 
+```bash
 python -m venv venv
 source venv/bin/activate  # macOS/Linux
 venv\Scripts\activate     # Windows
 
 pip install -r requirements.txt
-
+```
 
 Install Playwright browsers:
 
+```bash
 playwright install
+```
 
-🔑 LinkedIn Authentication Setup
+---
+
+## 🔑 LinkedIn Authentication Setup
 
 Playwright requires a logged-in LinkedIn session.
 Save your session state by running:
 
+```bash
 python save_state.py
+```
 
+* A browser window will open.
+* Log into LinkedIn manually.
+* Press **Enter** in the terminal when done.
+* Your session will be saved to `.auth/li_storage_state.json`.
 
-A browser window will open.
+---
 
-Log into LinkedIn manually.
-
-Press Enter in the terminal when done.
-
-Your session will be saved to .auth/li_storage_state.json.
-
-🖥️ Usage
+## 🖥️ Usage
 
 Run the CLI tool:
 
+```bash
 python cli.py [COMMAND] [OPTIONS]
+```
 
-LinkedIn Extractor
+### LinkedIn Extractor
 
 Scrape posts from a profile:
 
+```bash
 python cli.py linkedin --profile-url https://www.linkedin.com/in/example/ --min-posts 5
-
+```
 
 Arguments:
 
---profile-url (required) – LinkedIn profile to scrape.
+* `--profile-url` (required) – LinkedIn profile to scrape.
+* `--min-posts` (optional, default=5) – Number of posts to extract.
 
---min-posts (optional, default=5) – Number of posts to extract.
+---
 
-Textract Extractor
+### Textract Extractor
 
 Parse invoice and prescription images:
 
+```bash
 python cli.py textract --invoice-path samples/invoice.png --rx-path samples/rx.png
-
+```
 
 Arguments:
 
---invoice-path – Path to invoice image.
+* `--invoice-path` – Path to invoice image.
+* `--rx-path` – Path to prescription image.
 
---rx-path – Path to prescription image.
+---
 
-📂 Project Structure
+## 📂 Project Structure
+
+```
 healthforce_test_project/
 ├── cli.py              # CLI entrypoint
 ├── linkedin.py         # LinkedIn extractor
@@ -97,9 +111,33 @@ healthforce_test_project/
 ├── requirements.txt    # Dependencies
 ├── samples/            # Sample input images
 └── .auth/              # Saved LinkedIn session (auto-created)
+```
 
-🛠️ Development
+---
+
+## 🛠️ Development
 
 Format code:
 
+```bash
 black .
+```
+
+Run linter:
+
+```bash
+flake8
+```
+
+---
+
+## ⚠️ Disclaimer
+
+This project is for **educational purposes only**.
+Scraping LinkedIn may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement).
+Use responsibly.
+
+```
+
+Do you also want me to generate a **ready-to-use `requirements.txt`** with pinned versions for Playwright, Textract, and CLI tools?
+```
