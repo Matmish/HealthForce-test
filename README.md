@@ -1,5 +1,3 @@
-Got it 👍 You want the `README.md` as a **code block** so you can just copy it into your repo. Here it is:
-
 ````markdown
 # HealthForce Test Project
 
@@ -127,17 +125,4 @@ Run linter:
 
 ```bash
 flake8
-```
-
----
-
-## ⚠️ Disclaimer
-
-This project is for **educational purposes only**.
-Scraping LinkedIn may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement).
-Use responsibly.
-
-```
-
-Do you also want me to generate a **ready-to-use `requirements.txt`** with pinned versions for Playwright, Textract, and CLI tools?
 ```
